@@ -7,8 +7,10 @@ before feature work.
 ## Reporting a vulnerability
 
 **Do not open a public issue.** Report privately through GitHub's
-[private vulnerability reporting](https://docs.github.com/en/code-security/security-advisories/guidance-on-reporting-and-writing-information-about-vulnerabilities/privately-reporting-a-security-vulnerability)
-on this repository, or by email to `TODO-SET-SECURITY-CONTACT`.
+[private vulnerability reporting](https://docs.github.com/en/code-security/security-advisories/guidance-on-reporting-and-writing-information-about-vulnerabilities/privately-reporting-a-security-vulnerability):
+the **Report a vulnerability** button on this repository's Security tab. The
+report and the discussion that follows stay private to the maintainers until
+an advisory is published.
 
 Expect an acknowledgement within 72 hours and an assessment within seven days.
 
