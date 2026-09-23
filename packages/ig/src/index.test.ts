@@ -5,6 +5,6 @@ describe("igPackageId", () => {
   // This passing is also the proof that the workspace link from @nuskha/ig to
   // @nuskha/core resolves, which is the thing unit 0.1 actually has to show.
   it("formats the coordinate the HL7 tooling expects", () => {
-    expect(igPackageId()).toBe("ndhm.in#7.0.0");
+    expect(igPackageId()).toBe("ndhm.in#6.5.0");
   });
 });

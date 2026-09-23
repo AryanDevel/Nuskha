@@ -5,11 +5,17 @@
  * package, so moving the pin is a regenerate plus a golden diff somebody reads,
  * never a quiet change in what "conformant" means.
  *
- * @see https://nrces.in/preview/ndhm/fhir/r4/index.html
+ * This is 6.5.0, the newest release in the FHIR package registry. NRCeS also
+ * serves a 7.0.0 build, but only from its preview site and marked
+ * `notForPublication`, so it can change without a version bump. `@nuskha/ig`
+ * generates it alongside as a preview target, with a diff against this one,
+ * and the pin moves when 7.0.0 is actually released.
+ *
+ * @see https://nrces.in/ndhm/fhir/r4/index.html
  */
 export const IG_PACKAGE = {
   id: "ndhm.in",
-  version: "7.0.0",
+  version: "6.5.0",
   fhirVersion: "4.0.1",
 } as const;
 
@@ -22,9 +28,10 @@ export type IgPackage = typeof IG_PACKAGE;
  *
  * These are the `hiType` values the gateway and consent artefacts use. Note
  * that the IG's Composition profiles do not always share the spelling — the
- * profile behind `OPConsultation` is named `OPConsultRecord`. The mapping
- * between the two vocabularies is generated in `@nuskha/ig`, not hand-written
- * here, because getting it wrong is a silent conformance failure.
+ * profile behind `OPConsultation` is named `OPConsultRecord`. The IG never
+ * states the mapping between the two vocabularies, so `@nuskha/ig` declares it
+ * once and its generator checks it against every IG target, because getting it
+ * wrong is a silent conformance failure.
  */
 export const HI_TYPES = [
   "DiagnosticReport",

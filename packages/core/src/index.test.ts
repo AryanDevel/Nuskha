@@ -7,7 +7,7 @@ describe("IG_PACKAGE", () => {
   it("pins the implementation guide this build targets", () => {
     expect(IG_PACKAGE).toStrictEqual({
       id: "ndhm.in",
-      version: "7.0.0",
+      version: "6.5.0",
       fhirVersion: "4.0.1",
     });
   });

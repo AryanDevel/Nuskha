@@ -30,6 +30,6 @@ body:
     id: expected
     attributes:
       label: What the IG says should happen
-      description: Quote or link the relevant part of ndhm.in#7.0.0.
+      description: Quote or link the relevant part of ndhm.in#6.5.0 (or the 7.0.0 preview, if that is where you found it).
     validations:
       required: true
