@@ -11,8 +11,8 @@ Turn Indian clinical documents into ABDM-conformant FHIR bundles.
 
 A TypeScript library that reads a prescription, lab report or discharge summary
 (PDF or photo) and produces a FHIR bundle conformant to the
-[ABDM Implementation Guide](https://nrces.in/preview/ndhm/fhir/r4/index.html)
-(`ndhm.in#7.0.0`), together with a review UI for the human approval step and a
+[ABDM Implementation Guide](https://nrces.in/ndhm/fhir/r4/index.html)
+(`ndhm.in#6.5.0`, with the 7.0.0 preview tracked alongside), together with a review UI for the human approval step and a
 published accuracy benchmark.
 
 The design commitment that shapes everything else: **the model never writes
@@ -35,7 +35,7 @@ separately. See `docs/adr/` once ADR-0001 lands.
 | Unit | What |
 |------|------|
 | 0.1  | Repository skeleton — **done** |
-| 0.2  | IG code generation from `ndhm.in#7.0.0` |
+| 0.2  | IG code generation from `ndhm.in#6.5.0` and the 7.0.0 preview — **done** |
 | 0.3  | Validator harness (HL7 Java validator in Docker) |
 | 0.4  | Clinical IR v0 for Prescription |
 | 0.5  | The Prescription composer |
