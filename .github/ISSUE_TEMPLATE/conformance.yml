@@ -1,0 +1,35 @@
+name: Conformance problem
+description: A bundle is rejected, or accepted when it should not be.
+labels: ["conformance"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        For disagreements with the ABDM Implementation Guide. Include the
+        validator output; redact any patient data before pasting.
+  - type: input
+    id: hitype
+    attributes:
+      label: Health information type
+      placeholder: Prescription, DiagnosticReport, OPConsultation, ...
+    validations:
+      required: true
+  - type: input
+    id: profile
+    attributes:
+      label: Profile or resource
+      placeholder: https://nrces.in/ndhm/fhir/r4/StructureDefinition/...
+  - type: textarea
+    id: output
+    attributes:
+      label: Validator output
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What the IG says should happen
+      description: Quote or link the relevant part of ndhm.in#7.0.0.
+    validations:
+      required: true
