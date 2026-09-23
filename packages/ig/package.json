@@ -9,15 +9,21 @@
     ".": {
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
+    },
+    "./preview": {
+      "types": "./dist/preview.d.ts",
+      "default": "./dist/preview.js"
     }
   },
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "tsc --build"
+    "build": "tsc --build",
+    "regen": "node scripts/regen.ts"
   },
   "dependencies": {
-    "@nuskha/core": "workspace:*"
+    "@nuskha/core": "workspace:*",
+    "zod": "^4.6.5"
   }
 }
