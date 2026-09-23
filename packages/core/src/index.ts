@@ -50,3 +50,6 @@ export type HiType = (typeof HI_TYPES)[number];
 export function isHiType(value: string): value is HiType {
   return (HI_TYPES as readonly string[]).includes(value);
 }
+
+export * from "./prescription.ts";
+export * from "./provenance.ts";
