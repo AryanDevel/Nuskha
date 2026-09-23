@@ -1,6 +1,7 @@
 node_modules/
 dist/
 coverage/
+.cache/
 *.tsbuildinfo
 
 # Local tool state. See CONTRIBUTING.md for why this is not committed.

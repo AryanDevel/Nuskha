@@ -7,9 +7,11 @@
     "declarationMap": false,
     "sourceMap": false,
     "types": ["node"],
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
     "paths": {
       "@nuskha/*": ["./packages/*/src/index.ts"]
     }
   },
-  "include": ["packages/*/src/**/*", "vitest.config.ts"]
+  "include": ["packages/*/src/**/*", "packages/*/scripts/**/*", "vitest.config.ts"]
 }
