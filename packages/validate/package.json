@@ -1,0 +1,24 @@
+{
+  "name": "@nuskha/validate",
+  "version": "0.0.0",
+  "description": "Typed wrapper around the HL7 FHIR validator, pinned to the ABDM implementation guide.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc --build",
+    "fetch-validator": "node scripts/fetch-validator.ts"
+  },
+  "dependencies": {
+    "@nuskha/core": "workspace:*"
+  }
+}

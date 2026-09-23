@@ -1,0 +1,356 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "OperationOutcome",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>OperationOutcome </b></p><table class=\"grid\"><tr><td><b>Severity</b></td><td><b>Location</b></td><td><b>Code</b></td><td><b>Details</b></td><td><b>Diagnostics</b></td><td><b>Source</b></td></tr><tr><td>Warning</td><td>Bundle.entry[0].resource/*Composition/ad82431f-501e-4988-8071-84a917722ced*/.language</td><td>Informational Note</td><td>Unable to validate code without using server because: Resolved system urn:ietf:bcp:47 (v2.0.1), but the definition doesn't include any codes, so the code has not been validated</td><td/><td>TerminologyEngine</td></tr><tr><td>Warning</td><td>Bundle.entry[3].resource/*MedicationRequest/39db3208-b061-46c4-8c2f-9fa3b540f251*/.dosageInstruction[0].timing.repeat.periodUnit</td><td>Informational Note</td><td>Unable to validate code without using server because: Resolved system http://unitsofmeasure.org (v3.0.1), but the definition doesn't include any codes, so the code has not been validated</td><td/><td>TerminologyEngine</td></tr><tr><td>Information</td><td>Bundle.entry[6].resource/*Binary/a96a0d98-1d3d-4d49-ac47-bf2304dba04a*/.contentType</td><td>Invalid Code</td><td>The value provided ('application/pdf') could not be validated in the absence of a terminology server</td><td/><td>TerminologyEngine</td></tr><tr><td>Information</td><td>Bundle.signature.sigFormat</td><td>Invalid Code</td><td>The value provided ('image/jpeg') could not be validated in the absence of a terminology server</td><td/><td>TerminologyEngine</td></tr></table></div>"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-file",
+            "valueString": "good.json"
+          }
+        ],
+        "issue": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                "valueInteger": 1
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                "valueInteger": 803
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source",
+                "valueString": "TerminologyEngine"
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                "valueCode": "TERMINOLOGY_TX_WARNING"
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-context",
+                "valueString": "http://hl7.org/fhir/StructureDefinition/Composition|4.0.1"
+              }
+            ],
+            "severity": "warning",
+            "code": "informational",
+            "details": {
+              "text": "Unable to validate code without using server because: Resolved system urn:ietf:bcp:47 (v2.0.1), but the definition doesn't include any codes, so the code has not been validated"
+            },
+            "expression": [
+              "Bundle.entry[0].resource/*Composition/ad82431f-501e-4988-8071-84a917722ced*/.language"
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                "valueInteger": 1
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                "valueInteger": 9008
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source",
+                "valueString": "TerminologyEngine"
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                "valueCode": "TERMINOLOGY_TX_WARNING"
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-context",
+                "valueString": "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Condition|6.5.0"
+              }
+            ],
+            "severity": "warning",
+            "code": "informational",
+            "details": {
+              "text": "Unable to validate code without using server because: Resolved system http://unitsofmeasure.org (v3.0.1), but the definition doesn't include any codes, so the code has not been validated"
+            },
+            "expression": [
+              "Bundle.entry[3].resource/*MedicationRequest/39db3208-b061-46c4-8c2f-9fa3b540f251*/.dosageInstruction[0].timing.repeat.periodUnit"
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                "valueInteger": 1
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                "valueInteger": 13022
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source",
+                "valueString": "TerminologyEngine"
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                "valueCode": "Terminology_TX_NoValid_15"
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-context",
+                "valueString": "http://hl7.org/fhir/StructureDefinition/Binary|4.0.1"
+              }
+            ],
+            "severity": "information",
+            "code": "code-invalid",
+            "details": {
+              "text": "The value provided ('application/pdf') could not be validated in the absence of a terminology server"
+            },
+            "expression": [
+              "Bundle.entry[6].resource/*Binary/a96a0d98-1d3d-4d49-ac47-bf2304dba04a*/.contentType"
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                "valueInteger": 1
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                "valueInteger": 121037
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source",
+                "valueString": "TerminologyEngine"
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                "valueCode": "Terminology_TX_NoValid_15"
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-context",
+                "valueString": "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner|6.5.0"
+              }
+            ],
+            "severity": "information",
+            "code": "code-invalid",
+            "details": {
+              "text": "The value provided ('image/jpeg') could not be validated in the absence of a terminology server"
+            },
+            "expression": ["Bundle.signature.sigFormat"]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "OperationOutcome",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>OperationOutcome </b></p><table class=\"grid\"><tr><td><b>Severity</b></td><td><b>Location</b></td><td><b>Code</b></td><td><b>Details</b></td><td><b>Diagnostics</b></td><td><b>Source</b></td></tr><tr><td>Warning</td><td>Bundle.entry[0].resource/*Composition/ad82431f-501e-4988-8071-84a917722ced*/.language</td><td>Informational Note</td><td>Unable to validate code without using server because: Resolved system urn:ietf:bcp:47 (v2.0.1), but the definition doesn't include any codes, so the code has not been validated</td><td/><td>TerminologyEngine</td></tr><tr><td>Error</td><td>Bundle.entry[0].resource/*Composition/ad82431f-501e-4988-8071-84a917722ced*/</td><td>Structural Issue</td><td>Composition.subject: minimum required = 1, but only found 0 (from https://nrces.in/ndhm/fhir/r4/StructureDefinition/PrescriptionRecord|6.5.0)</td><td/><td>InstanceValidator</td></tr><tr><td>Error</td><td>Bundle.entry[0].resource/*Composition/ad82431f-501e-4988-8071-84a917722ced*/.type.coding[0].code</td><td>Element value invalid</td><td>Value is '371530004' but is fixed to '440545006' in the profile https://nrces.in/ndhm/fhir/r4/StructureDefinition/PrescriptionRecord|6.5.0#Composition.type.coding.code</td><td/><td>InstanceValidator</td></tr><tr><td>Warning</td><td>Bundle.entry[3].resource/*MedicationRequest/39db3208-b061-46c4-8c2f-9fa3b540f251*/.dosageInstruction[0].timing.repeat.periodUnit</td><td>Informational Note</td><td>Unable to validate code without using server because: Resolved system http://unitsofmeasure.org (v3.0.1), but the definition doesn't include any codes, so the code has not been validated</td><td/><td>TerminologyEngine</td></tr><tr><td>Information</td><td>Bundle.entry[6].resource/*Binary/a96a0d98-1d3d-4d49-ac47-bf2304dba04a*/.contentType</td><td>Invalid Code</td><td>The value provided ('application/pdf') could not be validated in the absence of a terminology server</td><td/><td>TerminologyEngine</td></tr><tr><td>Information</td><td>Bundle.signature.sigFormat</td><td>Invalid Code</td><td>The value provided ('image/jpeg') could not be validated in the absence of a terminology server</td><td/><td>TerminologyEngine</td></tr></table></div>"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-file",
+            "valueString": "bad.json"
+          }
+        ],
+        "issue": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                "valueInteger": 37
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                "valueInteger": 28
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source",
+                "valueString": "TerminologyEngine"
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                "valueCode": "TERMINOLOGY_TX_WARNING"
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-context",
+                "valueString": "http://hl7.org/fhir/StructureDefinition/Composition|4.0.1"
+              }
+            ],
+            "severity": "warning",
+            "code": "informational",
+            "details": {
+              "text": "Unable to validate code without using server because: Resolved system urn:ietf:bcp:47 (v2.0.1), but the definition doesn't include any codes, so the code has not been validated"
+            },
+            "expression": [
+              "Bundle.entry[0].resource/*Composition/ad82431f-501e-4988-8071-84a917722ced*/.language"
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                "valueInteger": 27
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                "valueInteger": 8
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source",
+                "valueString": "InstanceValidator"
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                "valueCode": "Validation_VAL_Profile_Minimum"
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-context",
+                "valueString": "https://nrces.in/ndhm/fhir/r4/StructureDefinition/PrescriptionRecord|6.5.0"
+              }
+            ],
+            "severity": "error",
+            "code": "structure",
+            "details": {
+              "text": "Composition.subject: minimum required = 1, but only found 0 (from https://nrces.in/ndhm/fhir/r4/StructureDefinition/PrescriptionRecord|6.5.0)"
+            },
+            "expression": [
+              "Bundle.entry[0].resource/*Composition/ad82431f-501e-4988-8071-84a917722ced*/"
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                "valueInteger": 51
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                "valueInteger": 34
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source",
+                "valueString": "InstanceValidator"
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                "valueCode": "_DT_Fixed_Wrong"
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-context",
+                "valueString": "https://nrces.in/ndhm/fhir/r4/StructureDefinition/PrescriptionRecord|6.5.0"
+              }
+            ],
+            "severity": "error",
+            "code": "value",
+            "details": {
+              "text": "Value is '371530004' but is fixed to '440545006' in the profile https://nrces.in/ndhm/fhir/r4/StructureDefinition/PrescriptionRecord|6.5.0#Composition.type.coding.code"
+            },
+            "expression": [
+              "Bundle.entry[0].resource/*Composition/ad82431f-501e-4988-8071-84a917722ced*/.type.coding[0].code"
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                "valueInteger": 249
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                "valueInteger": 34
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source",
+                "valueString": "TerminologyEngine"
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                "valueCode": "TERMINOLOGY_TX_WARNING"
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-context",
+                "valueString": "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Condition|6.5.0"
+              }
+            ],
+            "severity": "warning",
+            "code": "informational",
+            "details": {
+              "text": "Unable to validate code without using server because: Resolved system http://unitsofmeasure.org (v3.0.1), but the definition doesn't include any codes, so the code has not been validated"
+            },
+            "expression": [
+              "Bundle.entry[3].resource/*MedicationRequest/39db3208-b061-46c4-8c2f-9fa3b540f251*/.dosageInstruction[0].timing.repeat.periodUnit"
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                "valueInteger": 375
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                "valueInteger": 41
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source",
+                "valueString": "TerminologyEngine"
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                "valueCode": "Terminology_TX_NoValid_15"
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-context",
+                "valueString": "http://hl7.org/fhir/StructureDefinition/Binary|4.0.1"
+              }
+            ],
+            "severity": "information",
+            "code": "code-invalid",
+            "details": {
+              "text": "The value provided ('application/pdf') could not be validated in the absence of a terminology server"
+            },
+            "expression": [
+              "Bundle.entry[6].resource/*Binary/a96a0d98-1d3d-4d49-ac47-bf2304dba04a*/.contentType"
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                "valueInteger": 393
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                "valueInteger": 30
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-source",
+                "valueString": "TerminologyEngine"
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                "valueCode": "Terminology_TX_NoValid_15"
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-context",
+                "valueString": "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner|6.5.0"
+              }
+            ],
+            "severity": "information",
+            "code": "code-invalid",
+            "details": {
+              "text": "The value provided ('image/jpeg') could not be validated in the absence of a terminology server"
+            },
+            "expression": ["Bundle.signature.sigFormat"]
+          }
+        ]
+      }
+    }
+  ]
+}

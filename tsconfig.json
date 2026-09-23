@@ -1,4 +1,14 @@
 {
   "files": [],
-  "references": [{ "path": "packages/core" }, { "path": "packages/ig" }]
+  "references": [
+    {
+      "path": "packages/core"
+    },
+    {
+      "path": "packages/ig"
+    },
+    {
+      "path": "packages/validate"
+    }
+  ]
 }

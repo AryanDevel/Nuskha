@@ -10,6 +10,7 @@ export default defineConfig({
     alias: {
       "@nuskha/core": src("core"),
       "@nuskha/ig": src("ig"),
+      "@nuskha/validate": src("validate"),
     },
   },
   test: {

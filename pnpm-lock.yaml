@@ -193,6 +193,12 @@ importers:
         specifier: ^4.6.5
         version: 4.6.5
 
+  packages/validate:
+    dependencies:
+      '@nuskha/core':
+        specifier: workspace:*
+        version: link:../core
+
 packages:
 
   '@biomejs/biome@2.5.14':
