@@ -36,7 +36,7 @@ separately. See `docs/adr/` once ADR-0001 lands.
 |------|------|
 | 0.1  | Repository skeleton — **done** |
 | 0.2  | IG code generation from `ndhm.in#6.5.0` and the 7.0.0 preview — **done** |
-| 0.3  | Validator harness (HL7 Java validator in Docker) |
+| 0.3  | Validator harness (HL7 Java validator in Docker) — **done** |
 | 0.4  | Clinical IR v0 for Prescription |
 | 0.5  | The Prescription composer |
 | 0.6  | CLI v0 |

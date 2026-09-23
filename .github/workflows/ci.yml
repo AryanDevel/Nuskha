@@ -71,6 +71,31 @@ jobs:
             exit 1
           fi
 
+  validator:
+    name: HL7 validator harness
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: pnpm/action-setup@v6
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      # The build downloads the pinned jar, checks its sha256, and warms the
+      # package cache for ndhm.in#6.5.0. Expect several minutes cold.
+      - name: Build the validator image
+        run: docker build -t nuskha-validator packages/validate/docker
+
+      - name: Validate a known-good IG example and a broken bundle
+        env:
+          NUSKHA_VALIDATOR_IMAGE: nuskha-validator
+        run: pnpm test packages/validate
+
   preview:
     name: IG 7.0.0 preview is unchanged
     # The preview build is not immutable. NRCeS can republish it under the same
