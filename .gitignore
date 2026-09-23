@@ -1,0 +1,24 @@
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
+
+# Local tool state. See CONTRIBUTING.md for why this is not committed.
+.claude/
+.vscode/
+.idea/
+
+.env
+.env.*
+!.env.example
+
+*.log
+.DS_Store
+Thumbs.db
+
+# Clinical documents must never be committed to this repository.
+# Synthetic corpora are generated from a seed, never stored. Real documents
+# live only under a data use agreement, never in version control.
+/corpus/
+/fixtures/private/
+/bench/gold/
