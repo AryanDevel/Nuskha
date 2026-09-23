@@ -1,0 +1,9 @@
+# Normalise to LF in the repository. CI runs on Linux and contributors are on
+# every platform; without this, line endings show up as spurious diffs.
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.pdf binary
+*.tgz binary
