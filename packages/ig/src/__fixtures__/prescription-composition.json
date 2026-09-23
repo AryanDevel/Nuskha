@@ -1,0 +1,69 @@
+{
+  "resourceType": "Composition",
+  "id": "ad82431f-501e-4988-8071-84a917722ced",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2020-07-09T15:32:26.605+05:30",
+    "profile": ["https://nrces.in/ndhm/fhir/r4/StructureDefinition/PrescriptionRecord"]
+  },
+  "language": "en-IN",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en-IN\" lang=\"en-IN\"><a name=\"Composition_ad82431f-501e-4988-8071-84a917722ced\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Composition ad82431f-501e-4988-8071-84a917722ced</b></p><a name=\"ad82431f-501e-4988-8071-84a917722ced\"> </a><a name=\"hcad82431f-501e-4988-8071-84a917722ced\"> </a><a name=\"ad82431f-501e-4988-8071-84a917722ced-hi-IN\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">version: 1; Last updated: 2020-07-09 15:32:26+0530; Language: en-IN</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-PrescriptionRecord.html\">PrescriptionRecord</a></p></div><p><b>identifier</b>: <code>https://ndhm.in/phr</code>/645bb0c3-ff7e-4123-bef5-3852a4784813</p><p><b>status</b>: Final</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 440545006}\">Prescription record</span></p><p><b>date</b>: 2017-05-27 11:46:09+0530</p><p><b>author</b>: <a href=\"Bundle-Prescription-example-06.html#urn-uuid-15dce6b3-8a8f-4786-94e4-7d5d853f900a\">Practitioner</a></p><p><b>title</b>: Prescription record</p></div>"
+  },
+  "identifier": {
+    "system": "https://ndhm.in/phr",
+    "value": "645bb0c3-ff7e-4123-bef5-3852a4784813"
+  },
+  "status": "final",
+  "type": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "440545006",
+        "display": "Prescription record"
+      }
+    ],
+    "text": "Prescription record"
+  },
+  "subject": {
+    "reference": "urn:uuid:773b3c48-6cb9-4627-ad26-e0f4a6f15d96",
+    "display": "Patient"
+  },
+  "date": "2017-05-27T11:46:09+05:30",
+  "author": [
+    {
+      "reference": "urn:uuid:15dce6b3-8a8f-4786-94e4-7d5d853f900a",
+      "display": "Practitioner"
+    }
+  ],
+  "title": "Prescription record",
+  "section": [
+    {
+      "title": "Prescription record",
+      "code": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "440545006",
+            "display": "Prescription record"
+          }
+        ]
+      },
+      "entry": [
+        {
+          "reference": "urn:uuid:39db3208-b061-46c4-8c2f-9fa3b540f251",
+          "type": "MedicationRequest"
+        },
+        {
+          "reference": "urn:uuid:03fcbd63-a025-4eb1-9948-44179e2a327b",
+          "type": "MedicationRequest"
+        },
+        {
+          "reference": "urn:uuid:a96a0d98-1d3d-4d49-ac47-bf2304dba04a",
+          "type": "Binary"
+        }
+      ]
+    }
+  ]
+}
