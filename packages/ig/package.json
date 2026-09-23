@@ -1,0 +1,23 @@
+{
+  "name": "@nuskha/ig",
+  "version": "0.0.0",
+  "description": "Types and profile registry generated from the ABDM FHIR Implementation Guide.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc --build"
+  },
+  "dependencies": {
+    "@nuskha/core": "workspace:*"
+  }
+}
