@@ -39,7 +39,7 @@ separately. See `docs/adr/` once ADR-0001 lands.
 | 0.3  | Validator harness (HL7 Java validator in Docker) — **done** |
 | 0.4  | Clinical IR v0 for Prescription — code done, ADR-0001 pending |
 | 0.5  | Prescription composer — **done** |
-| 0.6  | CLI v0 |
+| 0.6  | CLI v0 — **done** |
 | 0.7  | README, ADRs, first release |
 
 ## Development

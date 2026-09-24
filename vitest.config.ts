@@ -15,9 +15,9 @@ export default defineConfig({
     },
   },
   test: {
-    include: ["packages/*/src/**/*.test.ts"],
+    include: ["packages/*/src/**/*.test.ts", "apps/*/src/**/*.test.ts"],
     coverage: {
-      include: ["packages/*/src/**/*.ts"],
+      include: ["packages/*/src/**/*.ts", "apps/*/src/**/*.ts"],
       exclude: ["packages/*/src/**/*.test.ts"],
     },
   },

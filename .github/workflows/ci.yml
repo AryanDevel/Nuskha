@@ -71,6 +71,45 @@ jobs:
             exit 1
           fi
 
+  cli-install:
+    name: CLI works from a global install
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: pnpm/action-setup@v6
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - run: pnpm build
+
+      # Pack each package exactly as it would be published, then install the
+      # tarballs globally and run nuskha from a directory that is not the repo.
+      - name: Pack and install globally
+        run: |
+          mkdir -p "$RUNNER_TEMP/tarballs"
+          for p in packages/core packages/ig packages/validate packages/compose apps/cli; do
+            (cd "$p" && pnpm pack --pack-destination "$RUNNER_TEMP/tarballs")
+          done
+          npm install -g --no-audit --no-fund "$RUNNER_TEMP"/tarballs/*.tgz
+
+      - name: Compile and validate outside the repository
+        working-directory: ${{ runner.temp }}
+        run: |
+          cp "$GITHUB_WORKSPACE/packages/compose/src/__fixtures__/prescriptions/19-six-medicines.ir.json" rx.json
+          nuskha --version
+          nuskha compile rx.json -o bundle.json
+          nuskha validate --schema-only bundle.json
+          if nuskha validate --schema-only rx.json; then
+            echo "::error::an IR file passed bundle validation"
+            exit 1
+          fi
+
   validator:
     name: HL7 validator harness
     runs-on: ubuntu-latest
