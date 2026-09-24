@@ -1,0 +1,83 @@
+{
+  "irVersion": "0",
+  "hiType": "Prescription",
+  "date": {
+    "value": "2026-09-15"
+  },
+  "patient": {
+    "name": {
+      "value": "Imran Qureshi"
+    },
+    "identifiers": [
+      {
+        "kind": "abha-address",
+        "value": {
+          "value": "imran.q@abdm"
+        }
+      }
+    ],
+    "gender": {
+      "value": "male"
+    },
+    "birthDate": {
+      "value": "1988-03"
+    }
+  },
+  "practitioner": {
+    "name": {
+      "value": "Dr. Arvind Rao"
+    },
+    "identifiers": [
+      {
+        "kind": "medical-registration",
+        "value": {
+          "value": "KMC 45678"
+        },
+        "issuer": {
+          "value": "Karnataka Medical Council"
+        }
+      }
+    ],
+    "qualifications": [
+      {
+        "value": "MBBS"
+      },
+      {
+        "value": "MD (General Medicine)"
+      }
+    ]
+  },
+  "medications": [
+    {
+      "name": {
+        "value": "Tab. Azee 500"
+      },
+      "strength": {
+        "value": "500 mg"
+      },
+      "dose": {
+        "value": {
+          "value": 1,
+          "unit": "tab"
+        }
+      },
+      "frequency": {
+        "value": {
+          "kind": "every",
+          "times": 1,
+          "period": 1,
+          "unit": "d"
+        }
+      },
+      "duration": {
+        "value": {
+          "value": 3,
+          "unit": "d"
+        }
+      },
+      "foodRelation": {
+        "value": "before-food"
+      }
+    }
+  ]
+}

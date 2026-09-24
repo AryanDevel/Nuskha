@@ -1,0 +1,253 @@
+{
+  "resourceType": "Bundle",
+  "id": "715eaa6d-b05c-55ff-8f63-64695151c8e3",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2026-09-21T12:00:00+05:30",
+    "profile": [
+      "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentBundle"
+    ]
+  },
+  "identifier": {
+    "system": "urn:ietf:rfc:3986",
+    "value": "urn:uuid:2d28f1ae-f196-583a-b717-dc265efa110f"
+  },
+  "type": "document",
+  "timestamp": "2026-09-21T12:00:00+05:30",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:869e24db-93f2-5fea-ab00-430c89cce7c4",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "869e24db-93f2-5fea-ab00-430c89cce7c4",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/PrescriptionRecord"
+          ]
+        },
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "440545006",
+              "display": "Prescription record"
+            }
+          ],
+          "text": "Prescription record"
+        },
+        "subject": {
+          "reference": "urn:uuid:0f9d3d5c-e159-5bda-a233-6b44b7043d46",
+          "display": "Meera Sharma"
+        },
+        "date": "2026-09-14",
+        "author": [
+          {
+            "reference": "urn:uuid:d251bc57-4915-5a80-b7b2-53150507bef7",
+            "display": "Dr. Arvind Rao"
+          }
+        ],
+        "title": "Prescription record",
+        "custodian": {
+          "reference": "urn:uuid:522278db-6dbe-5268-967f-77dd26446f0d",
+          "display": "Arogya Nursing Home"
+        },
+        "section": [
+          {
+            "title": "Prescription record",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "440545006",
+                  "display": "Prescription record"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:4361d92d-c61f-5c82-be8e-c1d04b841df0",
+                "type": "MedicationRequest"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0f9d3d5c-e159-5bda-a233-6b44b7043d46",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "0f9d3d5c-e159-5bda-a233-6b44b7043d46",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Patient"
+          ]
+        },
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "https://nrces.in/ndhm/fhir/r4/CodeSystem/ndhm-identifier-type-code",
+                  "code": "ABHA",
+                  "display": "Ayushman Bharat Health Account (ABHA) ID"
+                }
+              ]
+            },
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "91-1111-2222-3333"
+          }
+        ],
+        "name": [
+          {
+            "text": "Meera Sharma"
+          }
+        ],
+        "gender": "female"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d251bc57-4915-5a80-b7b2-53150507bef7",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "d251bc57-4915-5a80-b7b2-53150507bef7",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner"
+          ]
+        },
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "MD",
+                  "display": "Medical License number"
+                }
+              ]
+            },
+            "value": "KMC 45678",
+            "assigner": {
+              "display": "Karnataka Medical Council"
+            }
+          }
+        ],
+        "name": [
+          {
+            "text": "Dr. Arvind Rao"
+          }
+        ],
+        "qualification": [
+          {
+            "code": {
+              "text": "MBBS"
+            }
+          },
+          {
+            "code": {
+              "text": "MD (General Medicine)"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:522278db-6dbe-5268-967f-77dd26446f0d",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "522278db-6dbe-5268-967f-77dd26446f0d",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization"
+          ]
+        },
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "https://nrces.in/ndhm/fhir/r4/CodeSystem/ndhm-identifier-type-code",
+                  "code": "OIN",
+                  "display": "Other identifier"
+                }
+              ]
+            },
+            "system": "https://rohini.iib.gov.in/",
+            "value": "8900080123456",
+            "assigner": {
+              "display": "Insurance Information Bureau (ROHINI)"
+            }
+          }
+        ],
+        "name": "Arogya Nursing Home",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "080 2345 6789"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4361d92d-c61f-5c82-be8e-c1d04b841df0",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "4361d92d-c61f-5c82-be8e-c1d04b841df0",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/MedicationRequest"
+          ]
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "text": "Tab. Dolo 650 (650 mg)"
+        },
+        "subject": {
+          "reference": "urn:uuid:0f9d3d5c-e159-5bda-a233-6b44b7043d46",
+          "display": "Meera Sharma"
+        },
+        "authoredOn": "2026-09-14",
+        "requester": {
+          "reference": "urn:uuid:d251bc57-4915-5a80-b7b2-53150507bef7",
+          "display": "Dr. Arvind Rao"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1 tab, 1-1-1, after food, for 3 days",
+            "additionalInstruction": [
+              {
+                "text": "after food"
+              }
+            ],
+            "timing": {
+              "repeat": {
+                "boundsDuration": {
+                  "value": 3,
+                  "unit": "d",
+                  "system": "http://unitsofmeasure.org",
+                  "code": "d"
+                },
+                "when": [
+                  "MORN",
+                  "AFT",
+                  "NIGHT"
+                ]
+              }
+            },
+            "doseAndRate": [
+              {
+                "doseQuantity": {
+                  "value": 1,
+                  "unit": "tab"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "irVersion": "0",
+  "hiType": "Prescription",
+  "date": {
+    "value": "2026-09-21"
+  },
+  "patient": {
+    "name": {
+      "value": "Ravi Kumar"
+    },
+    "identifiers": [
+      {
+        "kind": "abha-address",
+        "value": {
+          "value": "ravi.kumar@sbx"
+        }
+      }
+    ]
+  },
+  "practitioner": {
+    "name": {
+      "value": "Dr. S. Iyer"
+    },
+    "identifiers": [
+      {
+        "kind": "medical-registration",
+        "value": {
+          "value": "TNMC 11223"
+        }
+      }
+    ]
+  },
+  "medications": [
+    {
+      "name": {
+        "value": "Tab. Pan 40"
+      },
+      "instructions": {
+        "value": "1 tab before breakfast for 14 days"
+      }
+    }
+  ]
+}

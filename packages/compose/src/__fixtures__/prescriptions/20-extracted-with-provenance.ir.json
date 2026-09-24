@@ -1,0 +1,308 @@
+{
+  "irVersion": "0",
+  "hiType": "Prescription",
+  "date": {
+    "value": "2026-09-21T10:42:00+05:30",
+    "provenance": {
+      "confidence": 0.97,
+      "spans": [
+        {
+          "page": 1,
+          "box": {
+            "x": 0.72,
+            "y": 0.12,
+            "width": 0.18,
+            "height": 0.03
+          },
+          "text": "21/09/2026"
+        }
+      ]
+    }
+  },
+  "patient": {
+    "name": {
+      "value": "Meera Sharma",
+      "provenance": {
+        "confidence": 0.93,
+        "spans": [
+          {
+            "page": 1,
+            "box": {
+              "x": 0.08,
+              "y": 0.2,
+              "width": 0.3,
+              "height": 0.03
+            },
+            "text": "Mrs. Meera Sharma"
+          }
+        ]
+      }
+    },
+    "identifiers": [
+      {
+        "kind": "abha-number",
+        "value": {
+          "value": "91-1111-2222-3333"
+        }
+      },
+      {
+        "kind": "mrn",
+        "value": {
+          "value": "OPD/2026/004512"
+        },
+        "issuer": {
+          "value": "Sanjeevani Clinic"
+        }
+      }
+    ],
+    "gender": {
+      "value": "female",
+      "provenance": {
+        "confidence": 0.9,
+        "spans": [
+          {
+            "page": 1,
+            "box": {
+              "x": 0.55,
+              "y": 0.2,
+              "width": 0.12,
+              "height": 0.03
+            },
+            "text": "34 Y / F"
+          }
+        ]
+      }
+    },
+    "age": {
+      "value": {
+        "value": 34,
+        "unit": "a"
+      },
+      "provenance": {
+        "confidence": 0.9,
+        "spans": [
+          {
+            "page": 1,
+            "box": {
+              "x": 0.55,
+              "y": 0.2,
+              "width": 0.12,
+              "height": 0.03
+            },
+            "text": "34 Y / F"
+          }
+        ]
+      }
+    },
+    "phone": {
+      "value": "+91 98765 43210"
+    }
+  },
+  "practitioner": {
+    "name": {
+      "value": "Dr. Arvind Rao"
+    },
+    "identifiers": [
+      {
+        "kind": "medical-registration",
+        "value": {
+          "value": "KMC 45678"
+        },
+        "issuer": {
+          "value": "Karnataka Medical Council"
+        }
+      }
+    ],
+    "qualifications": [
+      {
+        "value": "MBBS"
+      },
+      {
+        "value": "MD (General Medicine)"
+      }
+    ]
+  },
+  "organization": {
+    "name": {
+      "value": "Sanjeevani Clinic"
+    },
+    "identifiers": [
+      {
+        "kind": "hfr-id",
+        "value": {
+          "value": "IN2910000123"
+        }
+      }
+    ],
+    "address": {
+      "value": "12, 4th Cross, Jayanagar, Bengaluru 560041"
+    }
+  },
+  "encounter": {
+    "kind": {
+      "value": "outpatient"
+    },
+    "date": {
+      "value": "2026-09-21"
+    },
+    "identifier": {
+      "value": "OPD/2026/004512"
+    }
+  },
+  "medications": [
+    {
+      "name": {
+        "value": "Tab. Dolo 650",
+        "provenance": {
+          "confidence": 0.88,
+          "spans": [
+            {
+              "page": 1,
+              "box": {
+                "x": 0.1,
+                "y": 0.4,
+                "width": 0.25,
+                "height": 0.03
+              },
+              "text": "Tab. Dolo 650"
+            }
+          ]
+        }
+      },
+      "strength": {
+        "value": "650 mg"
+      },
+      "form": {
+        "value": "tablet"
+      },
+      "dose": {
+        "value": {
+          "value": 1,
+          "unit": "tab"
+        }
+      },
+      "frequency": {
+        "value": {
+          "kind": "times-of-day",
+          "morning": 1,
+          "afternoon": 1,
+          "night": 1
+        },
+        "provenance": {
+          "confidence": 0.82,
+          "spans": [
+            {
+              "page": 1,
+              "box": {
+                "x": 0.45,
+                "y": 0.4,
+                "width": 0.08,
+                "height": 0.03
+              },
+              "text": "1-1-1"
+            }
+          ]
+        }
+      },
+      "foodRelation": {
+        "value": "after-food",
+        "provenance": {
+          "confidence": 0.75,
+          "spans": [
+            {
+              "page": 1,
+              "box": {
+                "x": 0.55,
+                "y": 0.4,
+                "width": 0.12,
+                "height": 0.03
+              },
+              "text": "after food"
+            }
+          ]
+        }
+      },
+      "duration": {
+        "value": {
+          "value": 3,
+          "unit": "d"
+        },
+        "provenance": {
+          "confidence": 0.85,
+          "spans": [
+            {
+              "page": 1,
+              "box": {
+                "x": 0.7,
+                "y": 0.4,
+                "width": 0.1,
+                "height": 0.03
+              },
+              "text": "x 3 days"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": {
+        "value": "Tab. Augmentin 625 Duo"
+      },
+      "strength": {
+        "value": "500 mg + 125 mg"
+      },
+      "dose": {
+        "value": {
+          "value": 1,
+          "unit": "tab"
+        }
+      },
+      "frequency": {
+        "value": {
+          "kind": "every",
+          "times": 2,
+          "period": 1,
+          "unit": "d"
+        }
+      },
+      "duration": {
+        "value": {
+          "value": 5,
+          "unit": "d"
+        }
+      },
+      "quantity": {
+        "value": {
+          "value": 10,
+          "unit": "tab"
+        },
+        "provenance": {
+          "confidence": 0.41,
+          "spans": []
+        }
+      }
+    },
+    {
+      "name": {
+        "value": "Syp. Ascoril LS"
+      },
+      "dose": {
+        "value": {
+          "value": 5,
+          "unit": "ml"
+        }
+      },
+      "asNeeded": {
+        "value": true
+      },
+      "instructions": {
+        "value": "SOS for cough, not more than 3 times a day"
+      }
+    }
+  ],
+  "source": {
+    "sha256": "3f8a1c9e6b2d4f7a0c5e8b1d3f6a9c2e4b7d0f3a6c9e2b5d8f1a4c7e0b3d6f9a",
+    "mediaType": "image/jpeg",
+    "pageCount": 1
+  }
+}

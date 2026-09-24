@@ -1,0 +1,575 @@
+{
+  "resourceType": "Bundle",
+  "id": "d82c329d-fac0-5514-a215-4de5cd7d06a9",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2026-09-21T12:00:00+05:30",
+    "profile": [
+      "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentBundle"
+    ]
+  },
+  "identifier": {
+    "system": "urn:ietf:rfc:3986",
+    "value": "urn:uuid:7dfdab3d-8053-5dba-bd69-602921967fb8"
+  },
+  "type": "document",
+  "timestamp": "2026-09-21T12:00:00+05:30",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:5eefd953-6db7-5f4c-bb33-b26078845c43",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "5eefd953-6db7-5f4c-bb33-b26078845c43",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/PrescriptionRecord"
+          ]
+        },
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "440545006",
+              "display": "Prescription record"
+            }
+          ],
+          "text": "Prescription record"
+        },
+        "subject": {
+          "reference": "urn:uuid:4f16d084-de87-5685-8313-0a7ce690ee56",
+          "display": "Meera Sharma"
+        },
+        "encounter": {
+          "reference": "urn:uuid:eea445ec-037d-50e1-a075-4abf165022a9",
+          "display": "Encounter"
+        },
+        "date": "2026-09-19",
+        "author": [
+          {
+            "reference": "urn:uuid:a4526720-6d09-5ac1-bfb3-46ff9e41d9be",
+            "display": "Dr. Arvind Rao"
+          }
+        ],
+        "title": "Prescription record",
+        "custodian": {
+          "reference": "urn:uuid:88c9ae4d-fadd-5417-b355-d2cd711e60b7",
+          "display": "Sanjeevani Clinic"
+        },
+        "section": [
+          {
+            "title": "Prescription record",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "440545006",
+                  "display": "Prescription record"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:57f4a7b3-c6b4-53d0-8852-d625db343d39",
+                "type": "MedicationRequest"
+              },
+              {
+                "reference": "urn:uuid:b99cd78b-770b-570a-9a14-683c0a3b63de",
+                "type": "MedicationRequest"
+              },
+              {
+                "reference": "urn:uuid:2215c4a8-2e42-58f1-bc17-cf26ee003ea8",
+                "type": "MedicationRequest"
+              },
+              {
+                "reference": "urn:uuid:ee9fe132-98bc-57e8-a7d4-cac2739fd399",
+                "type": "MedicationRequest"
+              },
+              {
+                "reference": "urn:uuid:31ec2720-1180-57b1-bae1-a3434735681b",
+                "type": "MedicationRequest"
+              },
+              {
+                "reference": "urn:uuid:8fa64f5a-5425-597f-b04b-b66158e174f0",
+                "type": "MedicationRequest"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4f16d084-de87-5685-8313-0a7ce690ee56",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "4f16d084-de87-5685-8313-0a7ce690ee56",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Patient"
+          ]
+        },
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "https://nrces.in/ndhm/fhir/r4/CodeSystem/ndhm-identifier-type-code",
+                  "code": "ABHA",
+                  "display": "Ayushman Bharat Health Account (ABHA) ID"
+                }
+              ]
+            },
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "91-1111-2222-3333"
+          }
+        ],
+        "name": [
+          {
+            "text": "Meera Sharma"
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+91 98765 43210"
+          }
+        ],
+        "gender": "female"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a4526720-6d09-5ac1-bfb3-46ff9e41d9be",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "a4526720-6d09-5ac1-bfb3-46ff9e41d9be",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner"
+          ]
+        },
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "MD",
+                  "display": "Medical License number"
+                }
+              ]
+            },
+            "value": "KMC 45678",
+            "assigner": {
+              "display": "Karnataka Medical Council"
+            }
+          }
+        ],
+        "name": [
+          {
+            "text": "Dr. Arvind Rao"
+          }
+        ],
+        "qualification": [
+          {
+            "code": {
+              "text": "MBBS"
+            }
+          },
+          {
+            "code": {
+              "text": "MD (General Medicine)"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:88c9ae4d-fadd-5417-b355-d2cd711e60b7",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "88c9ae4d-fadd-5417-b355-d2cd711e60b7",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization"
+          ]
+        },
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "PRN",
+                  "display": "Provider number"
+                }
+              ]
+            },
+            "system": "https://facility.ndhm.gov.in",
+            "value": "IN2910000123"
+          }
+        ],
+        "name": "Sanjeevani Clinic",
+        "address": [
+          {
+            "text": "12, 4th Cross, Jayanagar, Bengaluru 560041"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:eea445ec-037d-50e1-a075-4abf165022a9",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "eea445ec-037d-50e1-a075-4abf165022a9",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Encounter"
+          ]
+        },
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "urn:uuid:4f16d084-de87-5685-8313-0a7ce690ee56",
+          "display": "Meera Sharma"
+        },
+        "period": {
+          "start": "2026-09-19"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:57f4a7b3-c6b4-53d0-8852-d625db343d39",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "57f4a7b3-c6b4-53d0-8852-d625db343d39",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/MedicationRequest"
+          ]
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "text": "Tab. Dolo 650 (650 mg)"
+        },
+        "subject": {
+          "reference": "urn:uuid:4f16d084-de87-5685-8313-0a7ce690ee56",
+          "display": "Meera Sharma"
+        },
+        "encounter": {
+          "reference": "urn:uuid:eea445ec-037d-50e1-a075-4abf165022a9",
+          "display": "Encounter"
+        },
+        "authoredOn": "2026-09-19",
+        "requester": {
+          "reference": "urn:uuid:a4526720-6d09-5ac1-bfb3-46ff9e41d9be",
+          "display": "Dr. Arvind Rao"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1 tab, 1-1-1, after food, for 3 days",
+            "additionalInstruction": [
+              {
+                "text": "after food"
+              }
+            ],
+            "timing": {
+              "repeat": {
+                "boundsDuration": {
+                  "value": 3,
+                  "unit": "d",
+                  "system": "http://unitsofmeasure.org",
+                  "code": "d"
+                },
+                "when": [
+                  "MORN",
+                  "AFT",
+                  "NIGHT"
+                ]
+              }
+            },
+            "doseAndRate": [
+              {
+                "doseQuantity": {
+                  "value": 1,
+                  "unit": "tab"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b99cd78b-770b-570a-9a14-683c0a3b63de",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "b99cd78b-770b-570a-9a14-683c0a3b63de",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/MedicationRequest"
+          ]
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "text": "Tab. Pan D"
+        },
+        "subject": {
+          "reference": "urn:uuid:4f16d084-de87-5685-8313-0a7ce690ee56",
+          "display": "Meera Sharma"
+        },
+        "encounter": {
+          "reference": "urn:uuid:eea445ec-037d-50e1-a075-4abf165022a9",
+          "display": "Encounter"
+        },
+        "authoredOn": "2026-09-19",
+        "requester": {
+          "reference": "urn:uuid:a4526720-6d09-5ac1-bfb3-46ff9e41d9be",
+          "display": "Dr. Arvind Rao"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1 tab, 1-0-0, on an empty stomach, for 10 days",
+            "additionalInstruction": [
+              {
+                "text": "on an empty stomach"
+              }
+            ],
+            "timing": {
+              "repeat": {
+                "boundsDuration": {
+                  "value": 10,
+                  "unit": "d",
+                  "system": "http://unitsofmeasure.org",
+                  "code": "d"
+                },
+                "when": [
+                  "MORN"
+                ]
+              }
+            },
+            "doseAndRate": [
+              {
+                "doseQuantity": {
+                  "value": 1,
+                  "unit": "tab"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2215c4a8-2e42-58f1-bc17-cf26ee003ea8",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "2215c4a8-2e42-58f1-bc17-cf26ee003ea8",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/MedicationRequest"
+          ]
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "text": "Tab. Allegra 120"
+        },
+        "subject": {
+          "reference": "urn:uuid:4f16d084-de87-5685-8313-0a7ce690ee56",
+          "display": "Meera Sharma"
+        },
+        "encounter": {
+          "reference": "urn:uuid:eea445ec-037d-50e1-a075-4abf165022a9",
+          "display": "Encounter"
+        },
+        "authoredOn": "2026-09-19",
+        "requester": {
+          "reference": "urn:uuid:a4526720-6d09-5ac1-bfb3-46ff9e41d9be",
+          "display": "Dr. Arvind Rao"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1 tab, 0-0-1, for 7 days",
+            "timing": {
+              "repeat": {
+                "boundsDuration": {
+                  "value": 7,
+                  "unit": "d",
+                  "system": "http://unitsofmeasure.org",
+                  "code": "d"
+                },
+                "when": [
+                  "NIGHT"
+                ]
+              }
+            },
+            "doseAndRate": [
+              {
+                "doseQuantity": {
+                  "value": 1,
+                  "unit": "tab"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ee9fe132-98bc-57e8-a7d4-cac2739fd399",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "ee9fe132-98bc-57e8-a7d4-cac2739fd399",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/MedicationRequest"
+          ]
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "text": "Cap. Becosules"
+        },
+        "subject": {
+          "reference": "urn:uuid:4f16d084-de87-5685-8313-0a7ce690ee56",
+          "display": "Meera Sharma"
+        },
+        "encounter": {
+          "reference": "urn:uuid:eea445ec-037d-50e1-a075-4abf165022a9",
+          "display": "Encounter"
+        },
+        "authoredOn": "2026-09-19",
+        "requester": {
+          "reference": "urn:uuid:a4526720-6d09-5ac1-bfb3-46ff9e41d9be",
+          "display": "Dr. Arvind Rao"
+        },
+        "dosageInstruction": [
+          {
+            "text": "1 cap, 1 times a day, for 1 month",
+            "timing": {
+              "repeat": {
+                "boundsDuration": {
+                  "value": 1,
+                  "unit": "mo",
+                  "system": "http://unitsofmeasure.org",
+                  "code": "mo"
+                },
+                "frequency": 1,
+                "period": 1,
+                "periodUnit": "d"
+              }
+            },
+            "doseAndRate": [
+              {
+                "doseQuantity": {
+                  "value": 1,
+                  "unit": "cap"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:31ec2720-1180-57b1-bae1-a3434735681b",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "31ec2720-1180-57b1-bae1-a3434735681b",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/MedicationRequest"
+          ]
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "text": "Syp. Grilinctus"
+        },
+        "subject": {
+          "reference": "urn:uuid:4f16d084-de87-5685-8313-0a7ce690ee56",
+          "display": "Meera Sharma"
+        },
+        "encounter": {
+          "reference": "urn:uuid:eea445ec-037d-50e1-a075-4abf165022a9",
+          "display": "Encounter"
+        },
+        "authoredOn": "2026-09-19",
+        "requester": {
+          "reference": "urn:uuid:a4526720-6d09-5ac1-bfb3-46ff9e41d9be",
+          "display": "Dr. Arvind Rao"
+        },
+        "dosageInstruction": [
+          {
+            "text": "10 ml, 3 times a day, for 5 days",
+            "timing": {
+              "repeat": {
+                "boundsDuration": {
+                  "value": 5,
+                  "unit": "d",
+                  "system": "http://unitsofmeasure.org",
+                  "code": "d"
+                },
+                "frequency": 3,
+                "period": 1,
+                "periodUnit": "d"
+              }
+            },
+            "doseAndRate": [
+              {
+                "doseQuantity": {
+                  "value": 10,
+                  "unit": "ml"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8fa64f5a-5425-597f-b04b-b66158e174f0",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "8fa64f5a-5425-597f-b04b-b66158e174f0",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/MedicationRequest"
+          ]
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "text": "Betadine gargle"
+        },
+        "subject": {
+          "reference": "urn:uuid:4f16d084-de87-5685-8313-0a7ce690ee56",
+          "display": "Meera Sharma"
+        },
+        "encounter": {
+          "reference": "urn:uuid:eea445ec-037d-50e1-a075-4abf165022a9",
+          "display": "Encounter"
+        },
+        "authoredOn": "2026-09-19",
+        "requester": {
+          "reference": "urn:uuid:a4526720-6d09-5ac1-bfb3-46ff9e41d9be",
+          "display": "Dr. Arvind Rao"
+        },
+        "dosageInstruction": [
+          {
+            "text": "gargle with warm water 3 times a day",
+            "route": {
+              "text": "gargle"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

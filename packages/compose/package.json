@@ -1,0 +1,27 @@
+{
+  "name": "@nuskha/compose",
+  "version": "0.0.0",
+  "description": "Pure functions from Clinical IR to ABDM FHIR document bundles.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc --build"
+  },
+  "dependencies": {
+    "@nuskha/core": "workspace:*",
+    "@nuskha/ig": "workspace:*"
+  },
+  "devDependencies": {
+    "@nuskha/validate": "workspace:*"
+  }
+}
