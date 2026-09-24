@@ -112,6 +112,20 @@ describe("what a conformant bundle needs", () => {
     ]);
   });
 
+  it("requires a system on an organization's other identifier", () => {
+    const ir = mutate(supplied, (x) => {
+      x.organization.identifiers = [{ kind: "other", value: { value: "KA-CL-0091" } }];
+    });
+    expect(issues(ir)).toEqual([
+      "organization.identifiers.0.system: the ABDM Organization profile requires a system on every identifier",
+    ]);
+    const fixed = mutate(
+      ir,
+      (x) => (x.organization.identifiers[0].system = "https://example.org/clinics"),
+    );
+    expect(issues(fixed)).toEqual([]);
+  });
+
   it("rejects a medication with nothing to build a dosage from", () => {
     const ir = mutate(supplied, (x) => {
       x.medications[0] = { name: { value: "Tab. Dolo 650" }, strength: { value: "650 mg" } };
