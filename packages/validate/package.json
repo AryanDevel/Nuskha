@@ -3,6 +3,21 @@
   "version": "0.0.0",
   "description": "Typed wrapper around the HL7 FHIR validator, pinned to the ABDM implementation guide.",
   "license": "Apache-2.0",
+  "keywords": [
+    "fhir",
+    "abdm",
+    "hl7",
+    "validator"
+  ],
+  "homepage": "https://github.com/AryanDevel/Nuskha#readme",
+  "bugs": {
+    "url": "https://github.com/AryanDevel/Nuskha/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AryanDevel/Nuskha.git",
+    "directory": "packages/validate"
+  },
   "type": "module",
   "sideEffects": false,
   "exports": {
@@ -20,5 +35,9 @@
   },
   "dependencies": {
     "@nuskha/core": "workspace:*"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
   }
 }

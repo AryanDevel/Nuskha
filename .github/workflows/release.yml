@@ -1,0 +1,70 @@
+name: Release
+
+# Publishes whatever versions on main are not yet on npm, with provenance.
+#
+# Versioning happens in an ordinary pull request, not a bot one: run
+# `pnpm changeset version`, commit with `git commit -s`, open a PR, merge.
+# A bot-opened "Version Packages" PR would fail the DCO check (its commits
+# carry no Signed-off-by) and, opened with GITHUB_TOKEN, would never trigger
+# the required CI checks at all. See docs/releasing.md.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write # push the release tags
+  id-token: write # npm provenance, and trusted publishing when configured
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    name: Publish unpublished versions
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: pnpm/action-setup@v6
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: pnpm
+          registry-url: https://registry.npmjs.org
+
+      # Pending changesets mean the versions on main have not been cut for
+      # release yet (on the very first run they are all 0.0.0). Publishing
+      # them would put an unreleased version on npm, so stop here.
+      - name: Check for unapplied changesets
+        id: pending
+        run: |
+          pending=$(find .changeset -name '*.md' ! -name 'README.md' | wc -l)
+          echo "count=$pending" >> "$GITHUB_OUTPUT"
+          if [ "$pending" -gt 0 ]; then
+            echo "::notice::$pending unapplied changeset(s); run pnpm changeset version in a release PR. Nothing published."
+          fi
+
+      - if: steps.pending.outputs.count == '0'
+        run: pnpm install --frozen-lockfile
+
+      - if: steps.pending.outputs.count == '0'
+        run: pnpm build
+
+      # changeset publish skips any version already on the registry, so a
+      # push that changes no version publishes nothing. NODE_AUTH_TOKEN is
+      # only needed until npm trusted publishing is configured for each
+      # package; after that the secret can be deleted.
+      - name: Publish
+        if: steps.pending.outputs.count == '0'
+        run: pnpm changeset publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_CONFIG_PROVENANCE: "true"
+
+      - name: Push release tags
+        if: steps.pending.outputs.count == '0'
+        run: git push --tags

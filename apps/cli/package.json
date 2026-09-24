@@ -3,6 +3,21 @@
   "version": "0.0.0",
   "description": "Compile Clinical IR to ABDM FHIR bundles and validate them, from the command line.",
   "license": "Apache-2.0",
+  "keywords": [
+    "fhir",
+    "abdm",
+    "prescription",
+    "cli"
+  ],
+  "homepage": "https://github.com/AryanDevel/Nuskha#readme",
+  "bugs": {
+    "url": "https://github.com/AryanDevel/Nuskha/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AryanDevel/Nuskha.git",
+    "directory": "apps/cli"
+  },
   "type": "module",
   "bin": {
     "nuskha": "./dist/main.js"
@@ -21,5 +36,9 @@
     "@nuskha/core": "workspace:*",
     "@nuskha/ig": "workspace:*",
     "@nuskha/validate": "workspace:*"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
   }
 }

@@ -39,6 +39,9 @@ Changes that affect a published package need a changeset:
 pnpm changeset
 ```
 
+How a release is cut, and why it is not a bot pull request, is in
+[`docs/releasing.md`](docs/releasing.md).
+
 ## How work is organised
 
 Work is tracked as numbered units inside phases. Each unit has a definition of
