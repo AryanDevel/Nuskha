@@ -91,10 +91,10 @@ jobs:
       - name: Build the validator image
         run: docker build -t nuskha-validator packages/validate/docker
 
-      - name: Validate a known-good IG example and a broken bundle
+      - name: Validate the IG example, a broken bundle, and every composed fixture
         env:
           NUSKHA_VALIDATOR_IMAGE: nuskha-validator
-        run: pnpm test packages/validate
+        run: pnpm test packages/validate packages/compose
 
   preview:
     name: IG 7.0.0 preview is unchanged

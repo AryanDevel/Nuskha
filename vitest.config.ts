@@ -11,6 +11,7 @@ export default defineConfig({
       "@nuskha/core": src("core"),
       "@nuskha/ig": src("ig"),
       "@nuskha/validate": src("validate"),
+      "@nuskha/compose": src("compose"),
     },
   },
   test: {

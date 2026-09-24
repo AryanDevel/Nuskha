@@ -1,0 +1,133 @@
+{
+  "irVersion": "0",
+  "hiType": "Prescription",
+  "date": {
+    "value": "2026-09-17"
+  },
+  "patient": {
+    "name": {
+      "value": "Baby Aarav"
+    },
+    "identifiers": [
+      {
+        "kind": "mrn",
+        "value": {
+          "value": "PED-2026-0098"
+        },
+        "issuer": {
+          "value": "Sanjeevani Clinic"
+        }
+      }
+    ],
+    "gender": {
+      "value": "male"
+    },
+    "age": {
+      "value": {
+        "value": 18,
+        "unit": "mo"
+      }
+    }
+  },
+  "practitioner": {
+    "name": {
+      "value": "Dr. Arvind Rao"
+    },
+    "identifiers": [
+      {
+        "kind": "medical-registration",
+        "value": {
+          "value": "KMC 45678"
+        },
+        "issuer": {
+          "value": "Karnataka Medical Council"
+        }
+      }
+    ],
+    "qualifications": [
+      {
+        "value": "MBBS"
+      },
+      {
+        "value": "MD (General Medicine)"
+      }
+    ]
+  },
+  "organization": {
+    "name": {
+      "value": "Sanjeevani Clinic"
+    },
+    "identifiers": [
+      {
+        "kind": "hfr-id",
+        "value": {
+          "value": "IN2910000123"
+        }
+      }
+    ],
+    "address": {
+      "value": "12, 4th Cross, Jayanagar, Bengaluru 560041"
+    }
+  },
+  "medications": [
+    {
+      "name": {
+        "value": "Syp. Calpol 120"
+      },
+      "strength": {
+        "value": "120 mg/5 ml"
+      },
+      "form": {
+        "value": "syrup"
+      },
+      "dose": {
+        "value": {
+          "value": 2.5,
+          "unit": "ml"
+        }
+      },
+      "frequency": {
+        "value": {
+          "kind": "every",
+          "times": 1,
+          "period": 6,
+          "unit": "h"
+        }
+      },
+      "asNeeded": {
+        "value": true
+      },
+      "instructions": {
+        "value": "2.5 ml if fever above 100 F, at least 6 hours apart"
+      }
+    },
+    {
+      "name": {
+        "value": "Drops Vitamin D3"
+      },
+      "dose": {
+        "value": {
+          "value": 0.5,
+          "unit": "ml"
+        }
+      },
+      "frequency": {
+        "value": {
+          "kind": "every",
+          "times": 1,
+          "period": 1,
+          "unit": "d"
+        }
+      },
+      "foodRelation": {
+        "value": "with-food"
+      },
+      "duration": {
+        "value": {
+          "value": 3,
+          "unit": "mo"
+        }
+      }
+    }
+  ]
+}

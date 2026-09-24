@@ -81,11 +81,18 @@ export type EncounterKind = "outpatient" | "inpatient" | "emergency" | "virtual"
 /**
  * `issuer` names who assigned the value when the kind does not imply it: the
  * state medical council for a registration number, the hospital for an MRN.
+ *
+ * `system` is the URI of the namespace the value belongs to. The kinds ABDM
+ * defines have a known one, so it is only needed for `other`, and a document
+ * never prints it: an integrator or the review step supplies it. The
+ * Organization profile requires a system on every identifier, so an
+ * organization's `other` identifier must carry one.
  */
 export interface Identifier<Kind extends string> {
   readonly kind: Kind;
   readonly value: Field<string>;
   readonly issuer?: Field<string>;
+  readonly system?: string;
 }
 
 export type PatientIdentifierKind = "abha-number" | "abha-address" | "mrn" | "other";
@@ -250,6 +257,7 @@ function identifierSchema<K extends string>(kinds: readonly [K, ...K[]]): z.ZodT
       kind: z.enum(kinds),
       value: fieldSchema(text),
       issuer: opt(fieldSchema(text)),
+      system: opt(z.url({ message: "an identifier system is a URI" })),
     })
     .superRefine((id, ctx) => {
       const format = IDENTIFIER_FORMAT[id.kind];
@@ -284,7 +292,17 @@ export const Practitioner: z.ZodType<Practitioner> = z.strictObject({
 
 export const Organization: z.ZodType<Organization> = z.strictObject({
   name: fieldSchema(text),
-  identifiers: identifiers(["hfr-id", "other"], "Organization"),
+  identifiers: identifiers(["hfr-id", "other"], "Organization").superRefine((ids, ctx) => {
+    ids.forEach((id, i) => {
+      if (id.kind === "other" && id.system === undefined) {
+        ctx.addIssue({
+          code: "custom",
+          message: "the ABDM Organization profile requires a system on every identifier",
+          path: [i, "system"],
+        });
+      }
+    });
+  }),
   phone: opt(fieldSchema(text)),
   address: opt(fieldSchema(text)),
 });

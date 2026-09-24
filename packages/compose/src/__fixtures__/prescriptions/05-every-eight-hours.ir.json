@@ -1,0 +1,86 @@
+{
+  "irVersion": "0",
+  "hiType": "Prescription",
+  "date": {
+    "value": "2026-09-11"
+  },
+  "patient": {
+    "name": {
+      "value": "Meera Sharma"
+    },
+    "identifiers": [
+      {
+        "kind": "abha-number",
+        "value": {
+          "value": "91-1111-2222-3333"
+        }
+      }
+    ],
+    "gender": {
+      "value": "female"
+    },
+    "age": {
+      "value": {
+        "value": 34,
+        "unit": "a"
+      }
+    }
+  },
+  "practitioner": {
+    "name": {
+      "value": "Dr. Arvind Rao"
+    },
+    "identifiers": [
+      {
+        "kind": "medical-registration",
+        "value": {
+          "value": "KMC 45678"
+        },
+        "issuer": {
+          "value": "Karnataka Medical Council"
+        }
+      }
+    ],
+    "qualifications": [
+      {
+        "value": "MBBS"
+      },
+      {
+        "value": "MD (General Medicine)"
+      }
+    ]
+  },
+  "medications": [
+    {
+      "name": {
+        "value": "Cap. Amoxycillin 500"
+      },
+      "strength": {
+        "value": "500 mg"
+      },
+      "form": {
+        "value": "capsule"
+      },
+      "dose": {
+        "value": {
+          "value": 1,
+          "unit": "cap"
+        }
+      },
+      "frequency": {
+        "value": {
+          "kind": "every",
+          "times": 1,
+          "period": 8,
+          "unit": "h"
+        }
+      },
+      "duration": {
+        "value": {
+          "value": 7,
+          "unit": "d"
+        }
+      }
+    }
+  ]
+}

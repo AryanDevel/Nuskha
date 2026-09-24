@@ -1,0 +1,81 @@
+{
+  "irVersion": "0",
+  "hiType": "Prescription",
+  "date": {
+    "value": "2026-09-16"
+  },
+  "patient": {
+    "name": {
+      "value": "Meera Sharma"
+    },
+    "identifiers": [
+      {
+        "kind": "abha-number",
+        "value": {
+          "value": "91-1111-2222-3333"
+        }
+      }
+    ],
+    "gender": {
+      "value": "female"
+    },
+    "age": {
+      "value": {
+        "value": 34,
+        "unit": "a"
+      }
+    }
+  },
+  "practitioner": {
+    "name": {
+      "value": "Dr. Neha Kulkarni"
+    },
+    "identifiers": [
+      {
+        "kind": "hpr-id",
+        "value": {
+          "value": "71-2233-4455-6677"
+        }
+      },
+      {
+        "kind": "medical-registration",
+        "value": {
+          "value": "MMC 2019/04/1123"
+        },
+        "issuer": {
+          "value": "Maharashtra Medical Council"
+        }
+      }
+    ],
+    "phone": {
+      "value": "+91 90000 11111"
+    }
+  },
+  "medications": [
+    {
+      "name": {
+        "value": "Tab. Levocet 5"
+      },
+      "dose": {
+        "value": {
+          "value": 1,
+          "unit": "tab"
+        }
+      },
+      "frequency": {
+        "value": {
+          "kind": "times-of-day",
+          "morning": 0,
+          "afternoon": 0,
+          "night": 1
+        }
+      },
+      "duration": {
+        "value": {
+          "value": 5,
+          "unit": "d"
+        }
+      }
+    }
+  ]
+}
