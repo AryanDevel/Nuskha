@@ -155,6 +155,25 @@ describe("usage", () => {
     expect(await h.run("compile")).toBe(2);
   });
 
+  it("reports a validator that fails to run, instead of crashing", async () => {
+    // Regression: a failed run used to escape as an uncaught ValidatorError
+    // with a stack trace. Node standing in for java rejects `-jar`, so the
+    // run ends without writing a result, the same as a missing jar.
+    const h = harness({ "b.json": "{}" });
+    const code = await h.run(
+      "validate",
+      "b.json",
+      "--jar",
+      "missing.jar",
+      "--java",
+      process.execPath,
+    );
+    expect(code).toBe(1);
+    expect(h.stderr()).toContain("without writing a result. Its last output:");
+    expect(h.stderr()).toContain("-jar");
+    expect(h.stderr()).not.toMatch(/\n\s+at /);
+  });
+
   it("explains how to get a validator when there is none", async () => {
     const h = harness({ "b.json": "{}" }, { XDG_CACHE_HOME: "/nonexistent-nuskha-cache" });
     expect(await h.run("validate", "b.json", "--java", "no-such-java-binary")).toBe(2);
