@@ -1,4 +1,5 @@
 import { spawn } from "node:child_process";
+import { isAbsolute, resolve } from "node:path";
 
 /**
  * How the validator is started. Both runners pass it the same arguments and
@@ -48,12 +49,18 @@ export interface JavaRunnerOptions {
   readonly java?: string;
 }
 
-/** Runs the validator with a local JVM. */
+/**
+ * Runs the validator with a local JVM. The validator runs inside a scratch
+ * working directory, so relative paths are resolved against the caller's
+ * directory first. A bare command name such as `java` is left for PATH.
+ */
 export function javaRunner(options: JavaRunnerOptions): Runner {
+  const jar = resolve(options.jar);
+  const given = options.java ?? "java";
+  const java = isAbsolute(given) || !/[\\/]/.test(given) ? given : resolve(given);
   return {
-    name: `java (${options.jar})`,
-    run: (args, workdir, signal) =>
-      exec(options.java ?? "java", ["-jar", options.jar, ...args], workdir, signal),
+    name: `java (${jar})`,
+    run: (args, workdir, signal) => exec(java, ["-jar", jar, ...args], workdir, signal),
   };
 }
 
