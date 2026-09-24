@@ -13,5 +13,10 @@
       "@nuskha/*": ["./packages/*/src/index.ts"]
     }
   },
-  "include": ["packages/*/src/**/*", "packages/*/scripts/**/*", "vitest.config.ts"]
+  "include": [
+    "packages/*/src/**/*",
+    "packages/*/scripts/**/*",
+    "apps/*/src/**/*",
+    "vitest.config.ts"
+  ]
 }

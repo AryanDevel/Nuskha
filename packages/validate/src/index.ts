@@ -7,6 +7,12 @@ import { FHIR_VERSION } from "./pins.ts";
 import type { Runner } from "./runners.ts";
 
 export {
+  cachedValidator,
+  defaultCacheDir,
+  fetchValidator,
+  validatorJarPath,
+} from "./fetch.ts";
+export {
   cleanPath,
   formatIssue,
   parseOutput,

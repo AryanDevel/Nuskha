@@ -12,6 +12,9 @@
     },
     {
       "path": "packages/compose"
+    },
+    {
+      "path": "apps/cli"
     }
   ]
 }

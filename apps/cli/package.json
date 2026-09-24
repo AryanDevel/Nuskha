@@ -1,0 +1,25 @@
+{
+  "name": "@nuskha/cli",
+  "version": "0.0.0",
+  "description": "Compile Clinical IR to ABDM FHIR bundles and validate them, from the command line.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "bin": {
+    "nuskha": "./dist/main.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsc --build"
+  },
+  "dependencies": {
+    "@nuskha/compose": "workspace:*",
+    "@nuskha/core": "workspace:*",
+    "@nuskha/ig": "workspace:*",
+    "@nuskha/validate": "workspace:*"
+  }
+}
