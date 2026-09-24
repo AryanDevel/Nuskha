@@ -3,6 +3,22 @@
   "version": "0.0.0",
   "description": "Types and profile registry generated from the ABDM FHIR Implementation Guide.",
   "license": "Apache-2.0",
+  "keywords": [
+    "fhir",
+    "abdm",
+    "ndhm",
+    "implementation-guide",
+    "zod"
+  ],
+  "homepage": "https://github.com/AryanDevel/Nuskha#readme",
+  "bugs": {
+    "url": "https://github.com/AryanDevel/Nuskha/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AryanDevel/Nuskha.git",
+    "directory": "packages/ig"
+  },
   "type": "module",
   "sideEffects": false,
   "exports": {
@@ -25,5 +41,9 @@
   "dependencies": {
     "@nuskha/core": "workspace:*",
     "zod": "^4.6.5"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
   }
 }

@@ -3,6 +3,22 @@
   "version": "0.0.0",
   "description": "Clinical intermediate representation and provenance model for Nuskha.",
   "license": "Apache-2.0",
+  "keywords": [
+    "fhir",
+    "abdm",
+    "ndhm",
+    "clinical",
+    "intermediate-representation"
+  ],
+  "homepage": "https://github.com/AryanDevel/Nuskha#readme",
+  "bugs": {
+    "url": "https://github.com/AryanDevel/Nuskha/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AryanDevel/Nuskha.git",
+    "directory": "packages/core"
+  },
   "type": "module",
   "sideEffects": false,
   "exports": {
@@ -19,5 +35,9 @@
   },
   "dependencies": {
     "zod": "^4.6.5"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
   }
 }

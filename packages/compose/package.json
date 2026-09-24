@@ -3,6 +3,21 @@
   "version": "0.0.0",
   "description": "Pure functions from Clinical IR to ABDM FHIR document bundles.",
   "license": "Apache-2.0",
+  "keywords": [
+    "fhir",
+    "abdm",
+    "prescription",
+    "document-bundle"
+  ],
+  "homepage": "https://github.com/AryanDevel/Nuskha#readme",
+  "bugs": {
+    "url": "https://github.com/AryanDevel/Nuskha/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AryanDevel/Nuskha.git",
+    "directory": "packages/compose"
+  },
   "type": "module",
   "sideEffects": false,
   "exports": {
@@ -23,5 +38,9 @@
   },
   "devDependencies": {
     "@nuskha/validate": "workspace:*"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
   }
 }
